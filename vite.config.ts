@@ -6,5 +6,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     minify: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          dateFns: ["date-fns"],
+        }
+      },
+    },
   },
 });
