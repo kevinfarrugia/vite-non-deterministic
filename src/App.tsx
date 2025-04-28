@@ -2,9 +2,12 @@ import React from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { format } from "date-fns";
 
 const Foo = React.lazy(() => import("./Foo"));
 const Bar = React.lazy(() => import("./Bar"));
+
+console.log(format(new Date(), "yyyy-MM-dd HH:mm:ss"));
 
 function App() {
   return (
